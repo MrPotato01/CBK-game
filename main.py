@@ -24,15 +24,15 @@ start_button = button.Button(350, 300, start_img)
 exit_button = button.Button(900, 300, exit_img)
 
 def main():
-    run = True
+    run = [True]
 
-    while run:
+    while run[0]:
         menu.Menu.windoww(0, WIN, start_button, exit_button, run)  # Main menu settings
 
         #for loop of the window
         for event in pygame.event.get(): #checking for events happeing while running
             if event.type == pygame.QUIT: #if the exit button of the window clicked then:
-                run = False
+                run[0] = False
                 break #as no reason to continue checking the events after pressing the quit button
         pygame.display.update()
     pygame.quit() #Exit the window/game

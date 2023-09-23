@@ -9,5 +9,4 @@ class Menu():
             print("Start button clicked")
         if exit.draw(menu) == True: #WIN is the surface var from button file
             print("exit button clicked")
-            hun = False
-            #pygame.quit() #which means the program will be closed
+            hun[0] = False
